@@ -1,0 +1,55 @@
+% fonts
+\newfontfamily\NotoSerifCJK{Noto Serif CJK SC}
+
+\setbeamerfont{normal text}{family=\NotoSerifCJK}
+
+\setbeamerfont{structure}{family=\NotoSerifCJK}
+
+\setbeamerfont{title}{family=\NotoSerifCJK,size=\Huge}
+\setbeamerfont{title in head/foot}{parent={normal text}}
+\setbeamerfont{title in sidebar}{parent={normal text},size=\tiny}
+
+\setbeamerfont{author}{parent={normal text}}
+\setbeamerfont{author in head/foot}{parent={normal text}}
+\setbeamerfont{author in sidebar}{parent={normal text},size=\tiny}
+
+\setbeamerfont{abstract}{parent={normal text},size=\small}
+
+\setbeamerfont{section in head/foot}{parent={normal text}}
+\setbeamerfont{section in sidebar}{parent={normal text},size=\tiny}
+\setbeamerfont{subsection name}{parent={normal text},size=\large}
+
+\setbeamerfont{subsubsection in toc}{parent={normal text},size=\small}
+\setbeamerfont{itemize/enumerate subsubbody}{parent={normal text},size=\small}
+\setbeamerfont{note date}{parent={normal text},size=\small}
+
+\setbeamerfont{footnote}{parent={normal text},size=\tiny}
+
+\AtBeginDocument{\usebeamerfont{normal text}}
+
+% colors
+\definecolor{WhiteSmoke}{RGB}{245, 245, 245}
+\definecolor{LightGray}{RGB}{211, 211, 211}
+\definecolor{DimGray}{RGB}{105, 105, 105}
+\usecolortheme{default}
+\setbeamercolor{structure}{fg=black}
+\setbeamercolor{section in head/foot}{fg=DimGray,bg=WhiteSmoke}
+
+% outer theme
+\useoutertheme{default}
+
+% inner theme
+\useinnertheme{default}
+
+% footline
+\setbeamertemplate{footline}
+{%
+    \begin{beamercolorbox}[right]{section in head/foot}
+        \vskip3pt
+        {\usebeamerfont{section in head/foot}
+        {%
+            \inserttitle \quad | \quad \insertframenumber{}\enspace/\enspace\inserttotalframenumber} \qquad
+        }
+        \vskip3pt
+    \end{beamercolorbox}%
+}
